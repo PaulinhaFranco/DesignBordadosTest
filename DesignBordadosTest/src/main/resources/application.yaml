@@ -1,0 +1,50 @@
+alunos:
+  name: "Paula_Matheus"
+
+
+project:
+  name: 'DesignBordadosTest'
+  version: '1.0-SNAPSHOT'
+  description: 'Demo project for Spring Boot'
+
+
+info:
+  build:
+    artifact: "DesignBordadosTest"
+    name: "DesignBordadosTest"
+    description: "Demo project for Spring Boot"
+    version: "1.0-SNAPSHOT"
+
+
+application:
+  title: ${project.name}
+  version: ${project.version}
+
+
+spring:
+  output:
+    ansi:
+      enabled: NEVER
+  banner:
+    location: classpath:banner.txt
+
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    password: ''
+
+#Logging
+logging:
+  level:
+    org.example: debug
+    org.springframework.web: info
